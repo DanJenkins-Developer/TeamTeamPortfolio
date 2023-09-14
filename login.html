@@ -1,4 +1,7 @@
-<form action="action_page.php" method="post">
+
+
+
+<form action="" method="post">
     <div class="imgcontainer">
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
@@ -10,7 +13,7 @@
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
   
-      <button type="submit">Login</button>
+      <button type="submit" onclick=myFunction()>Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -20,4 +23,12 @@
       <button type="button" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
+
+    <script>
+      function myFunction() {
+        //document.getElementById("demo").innerHTML = "Paragraph changed.";
+        console.log("Loggin in")
+      }
+      </script>
+
   </form> 
