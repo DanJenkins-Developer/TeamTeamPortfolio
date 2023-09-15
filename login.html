@@ -6,39 +6,16 @@
 </head>
 
 <body>
-  <form action="accountpage.html" method="post">
-    <div class="imgcontainer">
-      <img src="img/FO3_Nuka-Cola_Quantum.webp" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit" onclick=myFunction()>Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-
-    <script>
-      function myFunction() {
-        //document.getElementById("demo").innerHTML = "Paragraph changed.";
-        console.log("Loggin in")
-      }
-    </script>
-
+  <form action="" id="loginForm">
+    <h1>Login</h1>
+    <input type="text" id="username" class="form-control" placeholder="Enter your Username...">
+    <input type="password" id="password" class="form-control" placeholder="Enter your Password...">
+    <button type="submit">Submit</button>
   </form>
 
+
   <iframe src="https://vlipsy.com/embed/17U2K1UM" width="640" height="360" frameborder="0"></iframe>
+  <script src="js/handleLogin.js"></script>
 </body>
 
 </html>
