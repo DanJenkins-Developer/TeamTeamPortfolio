@@ -1,25 +1,92 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Login Page</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .profile-pic {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="topnav">
-    <a class="active" href="index.html">Home</a>
-  </div>
+    <div class="container">
+        <h2>Login to your account</h2>
+        <form id="account-form">
+            <div class="form-group">
+                <label for="username">username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+    <script src="./js/handleLogin.js"></script>
+    <!-- <script>
 
-  <form action="" id="loginForm">
-    <h1>Login</h1>
-    <input type="text" id="username" class="form-control" placeholder="Enter your Username...">
-    <input type="password" id="password" class="form-control" placeholder="Enter your Password...">
-    <button type="submit">Submit</button>
-  </form>
+        const accountForm = document.getElementById("account-form");
 
+        accountForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
 
-  <iframe src="https://vlipsy.com/embed/17U2K1UM" width="640" height="360" frameborder="0"></iframe>
-  <script src="js/handleLogin.js"></script>
+            fetch('http://127.0.0.1:8000/login',{
+
+                method:'POST',
+                body: formData
+            })
+            .then(response => response.json())
+        .then(data => {
+            console.log("Received token:", data.access_token);
+            localStorage.setItem('token', data.access_token)
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+            // console.log("Form Data:", formData);
+            // console.log("First Name: " )
+        });
+    </script> -->
 </body>
-
 </html>

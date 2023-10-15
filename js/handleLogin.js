@@ -1,25 +1,22 @@
+const accountForm = document.getElementById("account-form");
 
-console.log("hello")
+        accountForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
 
-let loginForm = document.getElementById("loginForm")
+            fetch('http://127.0.0.1:8000/login',{
 
-
-loginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let usernameElement = document.getElementById("username")
-    let passwordElement = document.getElementById("password")
-
-    console.log(usernameElement.value)
-    console.log(passwordElement.value)
-
-    localStorage.setItem('pw', passwordElement.value)
-
-    window.localStorage.setItem('uname', usernameElement.value);
-
-
-    console.log("Inside handle login ::")
-    console.log(window.localStorage.getItem("uname"))
-
-    window.location.href = 'profile.html'
-})
+                method:'POST',
+                body: formData
+            })
+            .then(response => response.json())
+        .then(data => {
+            console.log("Received token:", data.access_token);
+            localStorage.setItem('token', data.access_token)
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+            // console.log("Form Data:", formData);
+            // console.log("First Name: " )
+        });
