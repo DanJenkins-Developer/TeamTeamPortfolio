@@ -113,7 +113,11 @@
                 .then(data => {
                 //console.log("Received token:", data.access_token);
                 //localStorage.setItem('token', data.access_token)
-                    console.log(data)
+                    console.log(data.access_token)
+                    if (data.access_token) {
+                        localStorage.setItem('token', data.access_token)
+                        window.location.href = "profile.html"; // Redirect to the desired URL
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
