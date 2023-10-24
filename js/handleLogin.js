@@ -4,6 +4,8 @@ const accountForm = document.getElementById("account-form");
             e.preventDefault();
             const formData = new FormData(this);
 
+            console.log(formData)
+
             fetch('http://127.0.0.1:8000/login',{
 
                 method:'POST',
