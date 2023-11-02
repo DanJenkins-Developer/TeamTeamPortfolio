@@ -11,11 +11,15 @@
 
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
-        <a href="login.html">Login</a>
+        <a id="loginLink" href="login.html">Login</a>
         <a href="#contact">Subscribe</a>
         <a href="#about">About</a>
-        <a href="register.html">Register</a>
+        <a id="registerLink" href="register.html">Register</a>
+        <!-- These links will be hidden/shown depending on the login status -->
+        <a id="logoutLink" href="#" style="display: none;">Logout</a>
+        <a id="profileLink" href="profile.html" style="display: none;">Profile</a>
     </div>
+    
     <header>
         <h1>Welcome to Team Quantum!</h1>
     </header>
@@ -85,6 +89,52 @@
         <li>Awarded "Best Innovation" at the National Tech Summit 2023.</li>
         <li>Secured a seed funding of $2 million for further development.</li>
     </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            updateNavigationBar();
+        });
+
+        function isAuthenticated() {
+        // Replace with actual logic to determine if user is logged in
+        return localStorage.getItem('token') !== null;
+        }
+        
+        function updateNavigationBar() {
+        var loginLink = document.getElementById('loginLink');
+        var registerLink = document.getElementById('registerLink');
+        var logoutLink = document.getElementById('logoutLink');
+        var profileLink = document.getElementById('profileLink');
+
+        if (isAuthenticated()) {
+            // User is logged in
+            loginLink.style.display = 'none';
+            registerLink.style.display = 'none';
+            logoutLink.style.display = 'block';
+            profileLink.style.display = 'block';
+        } else {
+            // User is not logged in
+            loginLink.style.display = 'block';
+            registerLink.style.display = 'block';
+            logoutLink.style.display = 'none';
+            profileLink.style.display = 'none';
+        }
+    }
+
+    function logout() {
+        // Clear user token or other relevant data
+        localStorage.removeItem('token');
+
+        // Update the navigation bar to reflect the logout state
+        updateNavigationBar();
+    }
+
+    // Assuming logoutLink has an onclick attribute in your HTML
+    document.getElementById('logoutLink').onclick = function(event) {
+        event.preventDefault();
+        logout();
+    };
+    </script>
 </body>
 
 </html>
