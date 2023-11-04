@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,8 @@
             font-weight: bold;
         }
 
-        input[type="text"], input[type="file"] {
+        input[type="text"],
+        input[type="file"] {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -47,6 +49,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>Enter Account Information</h2>
@@ -104,20 +107,20 @@
 
 
 
-            fetch('http://127.0.0.1:8000/register',{
+            fetch('http://127.0.0.1:8000/register', {
 
-                method:'POST',
+                method: 'POST',
                 body: formData
-                })
+            })
                 .then(response => response.json())
                 .then(data => {
-                //console.log("Received token:", data.access_token);
-                //localStorage.setItem('token', data.access_token)
-                    console.log(data.access_token)
-                    if (data.access_token) {
-                        localStorage.setItem('token', data.access_token)
-                        window.location.href = "profile.html"; // Redirect to the desired URL
-                    }
+                    //console.log("Received token:", data.access_token);
+                    //localStorage.setItem('token', data.access_token)
+                    console.log(data)
+                    // if (data.access_token) {
+                    //     localStorage.setItem('token', data.access_token)
+                    //     window.location.href = "profile.html"; // Redirect to the desired URL
+                    // }
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -125,4 +128,5 @@
         });
     </script>
 </body>
+
 </html>
