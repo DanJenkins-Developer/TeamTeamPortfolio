@@ -114,9 +114,19 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    //console.log("Received token:", data.access_token);
-                    //localStorage.setItem('token', data.access_token)
-                    console.log(data)
+
+                    const current_user = data
+
+                    console.log(current_user)
+                    console.log(current_user.access_token)
+
+                    localStorage.setItem("token", current_user.access_token)
+                    localStorage.setItem("current_user", JSON.stringify(current_user))
+
+                    console.log(localStorage.getItem("current_user"))
+
+                    window.location.href = "profile.html"; // Redirect to the user's profile
+
                     // if (data.access_token) {
                     //     localStorage.setItem('token', data.access_token)
                     //     window.location.href = "profile.html"; // Redirect to the desired URL
