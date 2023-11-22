@@ -94,3 +94,43 @@ body {
   font-size: 20px;
   margin-top: 15px;
 }
+
+
+
+.intermediary-content {
+  text-align: center;
+  padding: 50px;
+  background: #1abc9c;
+  /* This matches the header background color from your homepage */
+  color: white;
+}
+
+.intermediary-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.intermediary-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.intermediary-buttons .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 18px;
+  color: white;
+  background-color: #333;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.intermediary-buttons .login-btn:hover {
+  background-color: #555;
+}
+
+.intermediary-buttons .register-btn:hover {
+  background-color: #555;
+}
