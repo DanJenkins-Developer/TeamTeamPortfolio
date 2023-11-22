@@ -112,7 +112,13 @@
                 method: 'POST',
                 body: formData
             })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        // If the response is not ok, we'll handle it as an error
+                        return Promise.reject(response);
+                    }
+                    return response.json(); // Parse the JSON if response is ok
+                })
                 .then(data => {
 
                     const current_user = data
@@ -133,7 +139,25 @@
                     // }
                 })
                 .catch(error => {
-                    console.error('Error:', error);
+                    if (error instanceof Response) {
+                        // Check if error is an instance of Response
+                        error.json().then(body => {
+                            if (error.status === 422) {
+                                // Handle the specific 422 error
+                                console.error('Validation Error:', body);
+                                // Display the validation message to the user
+                                alert(body.detail[0].msg);
+                            } else {
+                                // Handle other HTTP errors
+                                console.error('HTTP Error:', body);
+                                alert("An error occurred: " + body.detail || "Something went wrong. Please try again later.");
+                            }
+                        });
+                    } else {
+                        // Handle non-HTTP errors (network error, etc.)
+                        console.error('Network or other error:', error);
+                        alert("Something went wrong. Please try again later.");
+                    }
                 });
         });
     </script>
