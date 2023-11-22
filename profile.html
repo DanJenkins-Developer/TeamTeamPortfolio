@@ -3,6 +3,19 @@
 
 <head>
     <title>Profile Page</title>
+    <script>
+        // Immediately retrieve the current user and token from localStorage
+        let current_user = JSON.parse(localStorage.getItem('current_user'));
+        let token = localStorage.getItem('token');
+
+        // Check if the user is not logged in (no current_user or no token)
+        if (!current_user || !token) {
+            // Redirect them to the login page
+            window.location.href = "login.html";
+            // Stop the execution of the current script
+            throw new Error("Redirecting to login");
+        }
+    </script>
 </head>
 
 <body>
