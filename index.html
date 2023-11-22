@@ -11,130 +11,62 @@
 
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
-        <a id="loginLink" href="login.html">Login</a>
-        <a href="#contact">Subscribe</a>
-        <a href="#about">About</a>
-        <a id="registerLink" href="register.html">Register</a>
-        <!-- These links will be hidden/shown depending on the login status -->
-        <a id="logoutLink" href="#" style="display: none;">Logout</a>
-        <a id="profileLink" href="profile.html" style="display: none;">Profile</a>
-    </div>
-    
-    <header>
-        <h1>Welcome to Team Quantum!</h1>
-    </header>
-
-    <h2>Team Team's Journey to Innovation</h2>
-
-    <p>
-        Welcome to the official website of Team Quantum! We are a group of engineers, developers,
-        and designers committed to creating solutions that make a difference. Take a dive into
-        our journey, our team members, and the work we're proud of.
-    </p>
-
-    <header>
-        <h1>About Team Quantum</h1>
-    </header>
-
-    <div class="meetTeamDiv">
-        <h2>Meet The Team</h2>
-
-        <ul style="list-style-type: none">
-            <li>
-                <strong>Subhan Mohammad:</strong> Computer Science major at Texas A&M Commerce
-                <p> Currently working on:
-                <ul>
-                    <li>CompTIA A+ Certification </li>
-                    <li>React Native </li>
-                    <li>HTML, CSS, and JavaScript </li>
-                    <li>Python </li>
-                </ul>
-                
-                </p>
-            </li>
-            <li>
-                <strong>Nick Rudd:</strong> Student at Texas A&M - Commerce
-                <p>Currently working on:
-                <ul>
-                    <li>BS in Computer Information Systems (Graduating  2024)</li>
-                    <li>CompTIA Security+ Certification</li>
-                </ul>
-                </p>
-            </li>
-            <li>  
-                <strong>Daniel Jenkins:</strong> My mission is to breakdown
-                barriers of entry into the field of cybersecurity and cybertechnology and
-                expand education of these topics for people everywhere to create a better world.
-                <p>Currently working on:
-                <ul>
-                    <li>BS in Computer Information Systems at Texas A&M - Commerce (Graduating December 2023)</li>
-                    <li>CompTIA Security+ Certification</li>
-                    <li>PLC Programming Lab for the Texas A&M Cybersecurity Center</li>
-                    <li>SimplKitchen recipe generator app</li>
-                </ul>
-                </p>
-            </li>
-        </ul>
+        <a href="#subscribe">Subscribe</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+        <img src="/img/FO3_Nuka-Cola_Quantum.webp" alt="Team Quantum" class="topnav-logo" />
     </div>
 
-    <header>
-        <h1>Team Quantum's Accomplishments</h1>
-    </header>
+    <div class="header">
+        <h1>Team Quantum</h1>
+        <p>This is our team's dreams, goals, etc...</p>
+    </div>
 
-    <h2>Our Achievements</h2>
+    <div class="team-members">
+        <div class="member">
+            <img src="/img/images.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="member-info">
+                <h3>Subhan Mohammad</h3> <!-- Replace with the actual member's name -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="/img/16a2066d261a38a5ba3bff2e101acb93.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="member-info">
+                <h3>Nick Rudd</h3> <!-- Replace with the actual member's name -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="/img/licensed-image.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="member-info">
+                <h3>Daniel Jenkins</h3> <!-- Replace with the actual member's name -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <!-- Repeat the member div for each team member -->
+    </div>
 
-    <ul>
-        <li>Completed initial prototypes within 3 months, exceeding industry averages.</li>
-        <li>Successfully identified and fixed over 300 bugs during our beta testing.</li>
-        <li>Awarded "Best Innovation" at the National Tech Summit 2023.</li>
-        <li>Secured a seed funding of $2 million for further development.</li>
-    </ul>
+    <!-- Additional sections or footer could be added here -->
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            updateNavigationBar();
-        });
-
-        function isAuthenticated() {
-        // Replace with actual logic to determine if user is logged in
-        return localStorage.getItem('token') !== null;
-        }
-        
-        function updateNavigationBar() {
-        var loginLink = document.getElementById('loginLink');
-        var registerLink = document.getElementById('registerLink');
-        var logoutLink = document.getElementById('logoutLink');
-        var profileLink = document.getElementById('profileLink');
-
-        if (isAuthenticated()) {
-            // User is logged in
-            loginLink.style.display = 'none';
-            registerLink.style.display = 'none';
-            logoutLink.style.display = 'block';
-            profileLink.style.display = 'block';
-        } else {
-            // User is not logged in
-            loginLink.style.display = 'block';
-            registerLink.style.display = 'block';
-            logoutLink.style.display = 'none';
-            profileLink.style.display = 'none';
-        }
-    }
-
-    function logout() {
-        // Clear user token or other relevant data
-        localStorage.removeItem('token');
-
-        // Update the navigation bar to reflect the logout state
-        updateNavigationBar();
-    }
-
-    // Assuming logoutLink has an onclick attribute in your HTML
-    document.getElementById('logoutLink').onclick = function(event) {
-        event.preventDefault();
-        logout();
-    };
-    </script>
 </body>
 
 </html>
