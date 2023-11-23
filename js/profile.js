@@ -1,9 +1,10 @@
-
-
 let welcomHeaderElement = document.getElementById('welcomeHeader')
 let profilePic = document.getElementById("profile-pic")
-let current_user = JSON.parse(localStorage.getItem('current_user'))
-let token = localStorage.getItem('token')
+
+
+
+current_user = JSON.parse(localStorage.getItem('current_user'))
+token = localStorage.getItem('token')
 
 console.log(current_user)
 console.log(current_user.first_name)
