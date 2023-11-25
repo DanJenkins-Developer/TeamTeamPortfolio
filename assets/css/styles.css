@@ -251,3 +251,95 @@ body {
   background-color: #d32f2f;
   /* Darker shade for hover effect */
 }
+
+/* Register Page */
+
+body.registration-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  /* Neutral background color for consistency */
+  color: #333;
+  /* Standard text color for readability */
+}
+
+#registration-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #fff;
+  /* White background for the form container */
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  /* Added border-radius for consistency with button styling */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+#register-label {
+  display: block;
+  font-size: 20px;
+  /* Matching font size for consistency */
+  font-weight: bold;
+  color: #333;
+  /* Dark color for the label for better readability */
+  margin-bottom: 10px;
+  /* Space between label and input */
+}
+
+input[type="text"],
+input[type="file"],
+input[type="password"],
+input[type="email"] {
+  /* Including all input types */
+  width: 100%;
+  padding: 15px;
+  /* More padding for a better user experience */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* Consistent border-radius */
+  font-size: 18px;
+  /* Larger font size for readability */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
+}
+
+.register-page-profile-pic {
+  width: 200px;
+  /* Set a fixed width for the profile picture preview */
+  height: 200px;
+  border-radius: 50%;
+  /* Circular profile picture */
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  /* Center the image */
+  display: none;
+  /* Hide by default */
+}
+
+.register-page-btn {
+  width: 100%;
+  /* Full-width button */
+  background-color: #1abc9c;
+  /* Color matching the header from the home page */
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  /* Larger padding for a bigger button */
+  cursor: pointer;
+  border-radius: 4px;
+  /* Consistent border-radius */
+  font-size: 20px;
+  /* Font size consistency */
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.register-page-btn:hover {
+  background-color: #159a80;
+  /* A darker shade for hover effect */
+}
