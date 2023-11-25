@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
     <title>Account Page</title>
-    <style>
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
         }
@@ -47,25 +48,26 @@
             padding: 10px 20px;
             cursor: pointer;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
-    <div class="container">
+    <div class="login-container">
         <h2>Login to your account</h2>
         <form id="account-form">
-            <div class="form-group">
-                <label for="email">email:</label>
-                <input type="text" id="email" name="email" required>
+            <div class="login-form-group">
+                <label for="email" class="login-label">email:</label>
+                <input type="text" id="email" name="email" required class="login-input">
             </div>
-            <div class="form-group">
-                <label for="last-name">password:</label>
-                <input type="password" id="password" name="password" required>
+            <div class="login-form-group">
+                <label for="password" class="login-label">password:</label>
+                <input type="password" id="password" name="password" required class="login-input">
             </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="login-btn">Login</button>
         </form>
     </div>
     <script src="./js/handleLogin.js"></script>
 </body>
+
 
 </html>

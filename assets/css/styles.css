@@ -134,3 +134,43 @@ body {
 .intermediary-buttons .register-btn:hover {
   background-color: #555;
 }
+
+
+/* Login Page Styles Integrated and Renamed */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-group {
+  margin-bottom: 20px;
+}
+
+.login-label {
+  display: block;
+  font-weight: bold;
+}
+
+.login-input[type="text"],
+.login-input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-profile-pic {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
