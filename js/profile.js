@@ -14,3 +14,10 @@ console.log(current_user.phone_number)
 
 welcomHeaderElement.innerHTML = `Welcome ${current_user.first_name + " " + current_user.last_name}`
 profilePic.src = "http://dnfuqgbuy8ebx.cloudfront.net/" + current_user.profile_picture_link
+
+
+function logout() {
+    localStorage.removeItem('current_user')
+    localStorage.removeItem('token')
+    window.location.href = "index.html"
+}
