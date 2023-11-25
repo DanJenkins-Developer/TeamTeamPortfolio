@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
     <title>Profile Page</title>
     <script>
         // Immediately retrieve the current user and token from localStorage
@@ -23,13 +24,16 @@
     <body>
 
         <div class="topnav">
-            <a class="active" href="index.html">Home</a>
+            <a href="index.html">Home</a>
+            <a href="profile.html" class="active">Profile</a>
+            <a href="#donate">Donate</a>
+            <button id="logout-button" onclick="logout()">Logout</button> <!-- Logout button -->
         </div>
 
-        <h1 id="welcomeHeader">Welcome to Your Profile</h1>
+        <h1 id="profile-welcomeHeader">Welcome to Your Profile</h1>
         <!-- Content of the profile page goes here -->
         <!-- <img src="http://dnfuqgbuy8ebx.cloudfront.net/032b4e3f-e5d3-480b-ae6c-64fc183c833b-Screenshot%20(146).png" id="profile-pic"> -->
-        <img src="" id="profile-pic">
+        <img src="" id="profile-profile-pic">
 
         <script src="js/profile.js"></script>
     </body>

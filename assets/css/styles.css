@@ -10,21 +10,8 @@ body {
   overflow: hidden;
   background-color: #333;
   text-align: center;
-}
-
-.topnav-logo {
-  position: absolute;
-  right: 10px;
-  /* Adjust as necessary for padding from the right edge */
-  top: 10px;
-  /* Adjust as necessary for padding from the top edge */
-  bottom: 10px;
-  height: 50px;
-  /* Decrease the height to make the image smaller */
-  width: auto;
-  /* This will maintain the aspect ratio of the image */
-  max-height: 100%;
-  /* This ensures the image doesn't overflow the navbar's height */
+  position: relative;
+  /* This ensures that absolute positioning is relative to the nav */
 }
 
 .topnav a {
@@ -199,4 +186,66 @@ body {
 .auth-login-btn:hover {
   background-color: #159a80;
   /* A darker shade for hover effect */
+}
+
+/* Profile page styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  /* Assuming you want a neutral background */
+  color: #333;
+  /* Standard text color for readability */
+}
+
+
+#profile-profile-pic {
+  width: 200px;
+  /* You can adjust as necessary */
+  height: 200px;
+  border-radius: 50%;
+  /* Circular profile picture */
+  object-fit: cover;
+  border: 3px solid #1abc9c;
+  /* To match the header color */
+  margin: 20px auto;
+  display: block;
+}
+
+#profile-welcomeHeader {
+  text-align: center;
+  background-color: #1abc9c;
+  /* To match the header color from the home page */
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+  /* Removing default margins */
+  font-size: 24px;
+  /* Large text for the welcome message */
+}
+
+#logout-button {
+  padding: 10px 20px;
+  background-color: #f44336;
+  /* A color that stands out, typically red for logout */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  /* Position the button absolutely within the .topnav container */
+  top: 50%;
+  /* Position halfway down the parent container */
+  right: 10px;
+  /* 10px from the right edge of the parent container */
+  transform: translateY(-50%);
+  /* This centers the button vertically */
+  text-decoration: none;
+  /* In case you used an <a> element */
+}
+
+#logout-button:hover {
+  background-color: #d32f2f;
+  /* Darker shade for hover effect */
 }

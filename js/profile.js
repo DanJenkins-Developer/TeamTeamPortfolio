@@ -1,5 +1,5 @@
-let welcomHeaderElement = document.getElementById('welcomeHeader')
-let profilePic = document.getElementById("profile-pic")
+let welcomHeaderElement = document.getElementById('profile-welcomeHeader')
+let profilePic = document.getElementById("profile-profile-pic")
 
 
 
