@@ -5,7 +5,7 @@ initialize();
 
 // Create a Checkout Session as soon as the page loads
 async function initialize() {
-    const response = await fetch("/create-checkout-session", {
+    const response = await fetch("https://team-portfolio-backend.onrender.com/create-checkout-session", {
         method: "POST",
     });
 
