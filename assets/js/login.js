@@ -13,7 +13,7 @@ accountForm.addEventListener("submit", function (e) {
 });
 
 async function postFormData(formData) {
-    const response = await fetch('http://127.0.0.1:8000/login', {
+    const response = await fetch('https://team-portfolio-backend.onrender.com/login', {
         method: 'POST',
         body: formData
     });
