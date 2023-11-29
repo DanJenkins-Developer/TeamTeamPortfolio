@@ -21,7 +21,7 @@ accountForm.addEventListener("submit", function (e) {
 
 
 
-    fetch('http://127.0.0.1:8000/register', {
+    fetch('https://team-portfolio-backend.onrender.com/register', {
 
         method: 'POST',
         body: formData
