@@ -4,6 +4,18 @@ const profilePic = document.getElementById("profile-pic");
 photoInput.addEventListener("change", function () {
     const file = this.files[0];
     if (file) {
+
+        // Check if the file is an image.
+        if (file.size > 1024 * 1024 * 2) {
+            alert("File too large, please pick a smaller file");
+            return;
+        }
+
+        if (!file.type.match("image.*")) {
+            alert("Please select an image file");
+            return;
+        }
+
         const reader = new FileReader();
         reader.onload = function (e) {
             profilePic.src = e.target.result;
